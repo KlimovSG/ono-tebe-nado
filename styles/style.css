@@ -16,11 +16,7 @@
     text-decoration: none;
 }
 
-.header__link {
-    text-decoration-line: none;
-}
-
-.header__links-list-item {
+.address__links-list-item {
     list-style-position: outside;
     font-weight: 400;
     font-size: 18px;
@@ -32,7 +28,14 @@
     list-style: none;
 }
 
-.header__link .header__link_active {
+
+.header__link,
+.address__link {
+    text-decoration-line: none;
+}
+
+
+.header__link_active {
     border-bottom: none;
 }
 
@@ -52,9 +55,10 @@
     font-size: 18px;
     line-height: 1.35;
     letter-spacing: 0.01em;
+    font-style: inherit;
 }
 
-.addres__margin-left-and-right {
+.header__address {
     margin-left: 184px;
     margin-right: 25px;
 }
@@ -134,6 +138,7 @@
 }
 
 .bet-button {
+    font-family: Raleway, sans-serif;
     font-weight: 500;
     font-size: 22px;
     text-transform: uppercase;
@@ -159,9 +164,7 @@
 
 .lots__cardlist {
     display: flex;
-    /* flex-direction: row; */
-    justify-content: space-between;
-    flex-grow: 1;
+    flex-wrap: wrap;
     gap: 25px;
     list-style: none;
 }
@@ -176,11 +179,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 563px;
-    min-width: 334px;
+    min-height: 563px;
+    max-width: 334px;
     list-style: none;
     padding: 53px 40px 48px 40px;
     z-index: 1;
+    background-position: center;
+    background-size: cover;
 }
 
 .card__title {
@@ -203,29 +208,19 @@
 
 .card_type_film {
     background-image: url(/images/card-lot-01.jpg);
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
 }
 
 .card_type_book {
     background-image: url(/images/card-lot-02.jpg);
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
 }
 
 .card_type_picture {
     background-image: url(/images/card-lot-03.jpg);
-    background-position: center;
-    background-size: cover;
-    z-index: -1;
 }
 .lots__look-more-link {
     display: block;
     margin-top: 30px;
     margin-left: 40px;
-    /* padding: 30px 820px 2px 40px; */
     text-decoration-line: none;
 }
 
@@ -281,7 +276,7 @@
     gap: 24px;
 }
 
-.first__p-about {
+.about__text-content {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
@@ -289,17 +284,11 @@
     color: #000;
 }
 
-.second__p-about {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #000;
-}
-
 .footer {
     display: grid;
     grid-template-columns: 1fr 155px 1fr;
     margin: 0 50px 88px 50px;
+    /* font-style: normal; */
 }
 
 .footer__menu-list {
